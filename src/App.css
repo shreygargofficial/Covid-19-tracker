@@ -1,6 +1,6 @@
 
 html,#root{
-  background-color: #f3f3f3;
+  background-color: #fffff3;
 }
 .content{
   background-color: white;
@@ -24,7 +24,10 @@ html,#root{
   height:330px;
   overflow-y: auto;
 }
+.select{
+width:150px;
 
+}
 .container_spinner {
   width: 100%;
   text-align: center;

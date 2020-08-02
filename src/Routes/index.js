@@ -2,20 +2,31 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    Redirect
 
 } from "react-router-dom";
 
-import Country from '../component/Country'
+
 import CovidNormal from '../component/CovidNormal'
-import React from 'react'
+import React,{useEffect} from 'react'
 function Index() {
+    let weight=""
+    useEffect(()=>{
+        let ctx=weight;
+        console.log(ctx);
+    })
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={CovidNormal} />
-                <Route exact path="/country/:country" component={Country}/>
-            </Switch>
-        </Router>
+        <React.Fragment>
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={CovidNormal}  />
+                    <Route path="/*" render={()=><Redirect to="/"/>}/>
+                </Switch>
+            </Router>
+            <canvas className="chart" ref={ref=>weight=ref}>
+
+        </canvas>
+        </React.Fragment>
     )
 }
 export default Index;
