@@ -1,0 +1,82 @@
+
+html,#root{
+  background-color: #f3f3f3;
+}
+.content{
+  background-color: white;
+  padding: 10px;
+  border:1px solid #ddd
+}
+.spiner_circle1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 20px solid red;
+  border-top: 20px solid white;
+  border-right: 20px solid orange;
+  border-bottom: 20px solid white;
+  animation: rotate 11s infinite linear;
+  position: absolute;
+  top: 47%;
+  left: 47%;
+}
+.table-container{
+  height:330px;
+  overflow-y: auto;
+}
+
+.container_spinner {
+  width: 100%;
+  text-align: center;
+}
+tr{
+  cursor: pointer;
+}
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(3600deg)
+  }
+  ;
+}
+.World-content{
+  display: flex;
+  justify-content: space-between;
+}
+.cardHandMade{
+  width: 230px;
+}
+.title{
+  font-size: 15px;
+  font-weight: 700;
+}
+.numbers{
+  font-size: 20px;
+}
+.total{
+  font-size:13px;
+  color: #555;
+}
+.table td {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid transparent !important;
+}
+.red{
+  color: red;
+}
+.green{
+  color:greenyellow;
+}
+::-webkit-scrollbar {
+ display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EDDF48;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
