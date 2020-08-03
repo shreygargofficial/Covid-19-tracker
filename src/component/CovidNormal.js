@@ -226,6 +226,8 @@ class CovidNormal extends React.Component {
                   </tbody>
                 </table>
               </div>
+              <br/>
+              <h4>WorldWide New Cases</h4>
               <canvas className="chart" ref={ref => this.weight = ref}></canvas>
             </Paper>
           </div>

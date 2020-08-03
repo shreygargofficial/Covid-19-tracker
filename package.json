@@ -1,7 +1,7 @@
 {
   "name": "covid",
   "version": "0.1.0",
-  "homepage": "http://beingyourself-shrey.github.io/covid-19-tracker",
+  "homepage": "http://beingyourself-shrey.github.io/Covid-19-tracker",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
