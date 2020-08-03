@@ -48,8 +48,21 @@ tr{
   display: flex;
   justify-content: space-between;
 }
+.select{
+  border:1px solid #ddd;
+  border-radius: 4px;
+  background-color: none;
+  padding:10px;
+ 
+}
+
 .cardHandMade{
   width: 230px;
+  border-top: 10px solid transparent;
+  cursor: pointer;
+}
+.cardHandMade:hover{
+  border-top: 10px solid green;
 }
 .title{
   font-size: 15px;

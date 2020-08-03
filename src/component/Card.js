@@ -13,7 +13,7 @@ function CardMade({ tag, total,today }) {
                     </div>
                 
                 
-                    <div className="title red numbers">
+                    <div className={tag!=="Recovered"?"red title numbers":"green title numbers" }>
                     +{convert(today)}
                     </div>
 
