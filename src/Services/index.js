@@ -3,7 +3,6 @@ import {Endpoint} from './Endpoint'
 class Index {
    
         countryParam(country){
-                console.log(country);
                 return Axios.get(Endpoint.API_COUNTRY+country)
         }
        
