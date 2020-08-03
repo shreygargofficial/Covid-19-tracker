@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Spinner from '../SpecialComponent/spinner'
 import Card from './Card'
@@ -7,11 +8,8 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
+import Chart from 'chart.js'
 
-import {
-  Redirect
-} from "react-router-dom";
-import { Line } from "react-chartjs-2";
 
 
 function Alert(props) {
@@ -28,14 +26,61 @@ class CovidNormal extends React.Component {
     error: ""
   }
 
-
+componentDidUpdate(){
+  //console.log("update");
+  let ctx = this.weight;
+  //console.log(ctx);
+  if(ctx){
+   new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels:[9,10,11,12,13,14,15,16,17,18,19,20,21,22],
+        datasets: [{
+          label: '# of Votes',
+          data: [{
+            x: 9,
+            y: 63.35
+        }, {
+            x: 10,
+            y: 63.35
+        },
+        {
+          x: 11,
+          y: 63.35
+      }, {
+          x: 12,
+          y: 63.70
+      },
+      {
+        x: 13,
+        y:63.40
+    }, {
+        x: 14,
+        y: 60
+    }],
+          borderColor: 'rgba(0, 0, 0, 1)',
+          borderWidth: 1,
+          borderJoinStyle:"round",
+          pointStyle:"rectRot",
+          pointHoverBackgroundColor:'rgba(0,255,0,1)'
+          
+        },
+  
+        ]
+      },
+      options: {
+        
+        }
+      
+  
+    })
+  }
+  
+}
   //did mount
 
   componentDidMount() {
-
-    let ctx = this.weight;
-    console.log(ctx);
-
+    //console.log("did");
     let serv = new Service();
     serv.countryParam("")
       .then(success => {
@@ -73,6 +118,7 @@ class CovidNormal extends React.Component {
 
   //select option change
   handleChange = (e) => {
+    //console.log("cahnge");
     let countryName = e.target.value;
     this.setState({ selectedLocation: countryName })
 
@@ -105,6 +151,7 @@ class CovidNormal extends React.Component {
 
   //render
   render() {
+    //console.log("render");
     return (
 
       <div className="container mt-3">
@@ -188,3 +235,4 @@ class CovidNormal extends React.Component {
 
 
 export default CovidNormal;
+
