@@ -8,13 +8,9 @@ import {
 
 
 import CovidNormal from '../component/CovidNormal'
-import React,{useEffect} from 'react'
+import React from 'react'
 function Index() {
-    let weight=""
-    useEffect(()=>{
-        let ctx=weight;
-        console.log(ctx);
-    })
+    
     return (
         <React.Fragment>
             <Router>
@@ -23,9 +19,6 @@ function Index() {
                     <Route path="/*" render={()=><Redirect to="/"/>}/>
                 </Switch>
             </Router>
-            <canvas className="chart" ref={ref=>weight=ref}>
-
-        </canvas>
         </React.Fragment>
     )
 }
